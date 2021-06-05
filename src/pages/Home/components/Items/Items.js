@@ -13,11 +13,15 @@ const Items = ({filters}) => {
 
   return (
     <div className="items">
-      {filteredItems?.map(item => (
+      {filteredItems && filteredItems.length > 0 && filteredItems.map(item => (
         <div key={item.id} className="items-item">
           <Item item={item} />
         </div>
-      ))}
+      )) || (
+        <div>
+          No results found with the selected filters
+        </div>
+      )}
     </div>
   );
 };
