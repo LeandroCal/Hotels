@@ -1,0 +1,69 @@
+@import './scss/index.scss';
+
+/* Fonts */
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Global CSS */
+
+.container {
+  @include flex(flex-start, flex-start, column);
+  margin: 0;
+  height: 100vh;
+}
+
+.content {
+  margin: 50px auto;
+  width: 90%;
+}
+
+form {
+  div {
+    border: solid 1px $black;
+    @include flex(center, center, column);
+    padding: 30px 0;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin: 10px 0;
+    }
+
+    select {
+      width: 80%;
+      height: 30px;
+    }
+
+    &.reset {
+      cursor: pointer;
+      background-color: #d4d4d4;
+    }
+  }
+}

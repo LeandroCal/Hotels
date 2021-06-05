@@ -1,0 +1,10 @@
+@import '../../../../scss/index.scss';
+
+.items {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+
+    &-item {
+        width: 50%;
+    }
+}
